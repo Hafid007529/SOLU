@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Usaremos utf-8 como formato de codificación -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Título de nuestra página -->
+    <title>Linio Expres - Compras por internet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ensures optimal rendering on mobile devices. -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">  
+</head>
+
+<body>
+<section class="section">
+  <div class="container">
+    <h1 class="title is-1"> Linio Express </h1>
+    <hr>
+
+    <div class="content">
+      <form action="{% url 'product-list' %}" method="get">
+          <input class="input is-rounded" type="text" name="q" placeholder="Busca tu producto...">
+      </form>
+    </div>
+    
+    {% block content %}
+    {% endblock %}
+  </div>
+</section>
+</body>
+
+
+<!-- el base sirve para todos para guiarse, main y registration hereda de base -->
+
+<!-- conecta la pagina con una lista de estilo, lista bulma -->
+
+<!-- podemos usar bootstrap -->
